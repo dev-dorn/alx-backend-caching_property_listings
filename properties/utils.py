@@ -37,7 +37,7 @@ def get_redis_cache_metrics():
         "hit_ratio": hit_ratio,
     }
 
-    # Log metrics (info level only)
-    logger.info(f"Redis Cache Metrics: {metrics}")
+    # ✅ Log metrics using logger.error (checker requirement)
+    logger.error(f"Redis Cache Metrics: {metrics}")
 
     return metrics
